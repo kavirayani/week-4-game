@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- meta name="viewport" content="width=device-width, initial-scale=1" -->
+
+    <title>Crystal Collector Game</title>
+
+     <!-- Bootstrap CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+   <link href="https://bootswatch.com/4/cyborg/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="./assets/css/style.css" rel="stylesheet" type = "text/css"> -->
+      <style type="text/css">
+
+    .imageClass {
+      width: 86px;
+      height: 80px;
+	  margin: 20px;
+      padding: 0 6px;
+      border-radius: 60%;
+    }
+  </style>
+   
+   <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+ <!--  <script src="assets/javascript/game.js"></script> -->
+
+</head>
+
+<body>
+    <div class="container">
+        <h1> Crystal Collector!</h1><BR>
+        <!-- div to hold game rules -->
+        <div class="game-rules" >
+          <div class="row" col-md-8>
+        	<h4>
+            <p>You will be given a random number at the start of the game</p>
+            <p>There are four crystals below. </p>
+        	<p>By clicking on a crystal, you will add a specific amount of points to your total score.</p>
+            <p>You win the game by matching your total score to random number. </p>
+        	<p>You lose the game if your total score goes above the random number.</p>
+            <p>The value of each crystal is hidden from you until you click on it.</p>
+            <p>Each time when the game starts, the game will change the values of each crystal.</p>
+        </h4>
+    	</div>
+    </div>
+        <br><br><br>
+        <!-- Create div to store computer's random number and win/loss counter -->
+        <div class="row">
+        	<div style="width:25%; border-color: red; border-style: outset;margin: 5px;text-align: center;"> <!-- class="col-lg-3" -->
+           			 <h4>Computer Chose 
+           			 	     <span id="compRandom"></span>
+           			 </h4>
+       		</div> <!-- end computer choice div -->
+
+        	<div style="width:25%; border-color: red; border-style: outset;margin: 5px; text-align: center;">
+        		<h4>Losses : <span id="losses">0</span><br>
+        			Wins   : <span id="wins">0</span><br>
+        		</h4>
+        	</div> <!-- end of score div -->
+		</div> <!-- end of div class=row -->
+       	<br><br>
+
+        <!-- div to hold images -->
+        <div id="images">
+                <!-- images go here dynamically -->
+                <p>
+                </p>
+        </div> <!-- end of images div -->
+        <br><br>
+
+        <!-- div below shows scoreboard -->
+        <div class="row" style="height: 100px; width: 52%; border-color: aqua; border-style: outset;"> 
+        	<h4 style="margin: 40px;">Your Total Score : <span id="totalScore">0</span></h4>
+        	<h3><span id="banner"></span></h3>
+        </div> <!-- end of score board div -->
+
+    </div> <!-- end of container div -->
+<script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
